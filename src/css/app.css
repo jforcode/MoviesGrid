@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  background: #FAFAFA;
+  font-family: 'Roboto', sans-serif;
+}
+
+.jb-flex-row {
+  display: flex;
+}
+
+.jb-flex-row--centered {
+  align-items: center;
+}
+
+.jb-flex-spacer {
+  flex-grow: 1;
+}
+
+.content {
+}
+
+.movies-grid {
+  margin: 16px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 8px -1px rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+  border-collapse: collapse;
+  display: block;
+  position: absolute;
+  width: calc(100% - 32px);
+  overflow: auto;
+}
+
+.movies-grid__header {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #212121;
+}
+
+.movies-grid__header-col {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 16px;
+  text-align: left;
+}
+
+.movies-grid__movie {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #616161;
+}
+
+.movies-grid__movie-col {
+  padding: 16px;
+}
+
+
+.header__title, .movie__title {
+  min-width: 120px;
+}
+
+.header__dir, .movie__dir {
+  min-width: 120px;
+}
+
+.header__actors, .movie__actors {
+  min-width: 120px;
+}
