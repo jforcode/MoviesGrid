@@ -114,6 +114,10 @@ a {
 .movies-grid__movie {
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #616161;
+  transition: all .2s;
+}
+.movies-grid__movie:hover {
+  background-color: #F5F5F5;
 }
 
 .movies-grid__movie-col {
