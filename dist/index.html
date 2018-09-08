@@ -7,13 +7,42 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
+    <div class="jb-top-app-bar jb-shadow--2dp">
+      <span class="jb-top-app-bar__title">News Feed</span>
+      <div class="jb-flex-spacer"></div>
+      <a href="https://www.linkedin.com/in/jeevan-mb-580905106/" class="jb-top-app-bar__link">
+        <span>@jforcode</span>
+      </a>
+    </div>
     <div class="content">
-      <p>Movies</p>
+      <div class="status-bar">
+        <p class="movies-label">Showing 20 results</p>
+        <div class="jb-flex-spacer"></div>
+        <div class="pagination-holder">
+          <button class="page-control" @click="loadPage(1)">
+            <i class="material-icons">first_page</i>
+          </button>
+          <button class="page-control" @click="loadPage(appState.currPageNum - 1)">
+            <i class="material-icons">chevron_left</i>
+          </button>
+          <span class="page-status">Page 1 of 20</span>
+          <button class="page-control" @click="loadPage(appState.currPageNum + 1)">
+            <i class="material-icons">chevron_right</i>
+          </button>
+          <button class="page-control" @click="loadPage(appState.lastPageNum)">
+            <i class="material-icons">last_page</i>
+          </button>
+        </div>
+      </div>
       <table class="movies-grid">
         <tr class="movies-grid__header">
-          <th class="movies-grid__header-col header__title">Title</th>
-          <th class="movies-grid__header-col header__dir">Director</th>
-          <th class="movies-grid__header-col header__actors">Actors</th>
+          <th class="movies-grid__header-col header__label">
+            <div class="jb-flex-row jb-flex-row--centered">
+              <span>Movie</span>
+              <div class="jb-flex-spacer"></div>
+              <i class="material-icons">keyboard_arrow_down</i>
+            </div>
+          </th>
           <th class="movies-grid__header-col header__genres">
             <div class="jb-flex-row jb-flex-row--centered">
               <span>Genre</span>
@@ -28,16 +57,44 @@
               <i class="material-icons">keyboard_arrow_down</i>
             </div>
           </th>
-          <th class="movies-grid__header-col header__cntry">Country</th>
-          <th class="movies-grid__header-col header__rating">Content Rating</th>
-          <th class="movies-grid__header-col header__budget">Budget</th>
-          <th class="movies-grid__header-col header__year">Title Year</th>
+          <th class="movies-grid__header-col header__cntry">
+            <div class="jb-flex-row jb-flex-row--centered">
+              <span>Country</span>
+              <div class="jb-flex-spacer"></div>
+              <i class="material-icons">keyboard_arrow_down</i>
+            </div>
+          </th>
+          <th class="movies-grid__header-col header__rating">
+            <div class="jb-flex-row jb-flex-row--centered">
+              <span>Content Rating</span>
+              <div class="jb-flex-spacer"></div>
+              <i class="material-icons">keyboard_arrow_down</i>
+            </div>
+          </th>
+          <th class="movies-grid__header-col header__budget">
+            <div class="jb-flex-row jb-flex-row--centered">
+              <span>Budget</span>
+              <div class="jb-flex-spacer"></div>
+              <i class="material-icons">keyboard_arrow_down</i>
+            </div>
+          </th>
+          <th class="movies-grid__header-col header__year">
+            <div class="jb-flex-row jb-flex-row--centered">
+              <span>Title Year</span>
+              <div class="jb-flex-spacer"></div>
+              <i class="material-icons">keyboard_arrow_down</i>
+            </div>
+          </th>
           <th class="movies-grid__header-col header__plot">Plot Keywords</th>
         </tr>
         <tr class="movies-grid__movie">
-          <td class="movies-grid__movie-col movie__title">Avatar</td>
-          <td class="movies-grid__movie-col movie__dir">James Cameron</td>
-          <td class="movies-grid__movie-col movie__actors">CCH Pounder, Joel David Moore</td>
+          <td class="movies-grid__movie-col movie__label">
+            <div class="">
+              <p class="movie__title">Avatar</p>
+              <p class="movie__director">Director: James Cameron</p>
+              <p class="movie__actors">Actors: CCH Pounder, Joel David Moore</p>
+            </div>
+          </td>
           <td class="movies-grid__movie-col movie__genres">Action|Adventure|Fantasy|Sci-Fi</td>
           <td class="movies-grid__movie-col movie__lang">English</td>
           <td class="movies-grid__movie-col movie__cntry">USA</td>

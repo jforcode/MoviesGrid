@@ -1,7 +1,21 @@
+:root {
+  --primary-color: #2196F3;
+  --accent-color: #FF5722;
+  --primary-text-color-on-dark-bg: #FFFFFF;
+}
+
 body {
   margin: 0;
   background: #FAFAFA;
   font-family: 'Roboto', sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .jb-flex-row {
@@ -16,18 +30,72 @@ body {
   flex-grow: 1;
 }
 
-.content {
+.jb-top-app-bar {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color-on-dark-bg);
+}
+
+.jb-top-app-bar__title {
+  font-size: 1.4em;
+}
+
+.jb-top-app-bar__link {
+  color: var(--primary-text-color-on-dark-bg);
+  font-size: 1.2em;
+}
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.pagination-holder {
+  display: flex;
+  align-items: center;
+}
+
+.page-control {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all .2s;
+}
+.page-control:hover {
+  background: #EEEEEE;
+}
+.page-control[disabled] {
+  color: gray;
+  cursor: inherit;
+}
+.page-control[disabled]:hover {
+  background: inherit;
+}
+
+.page-status {
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 1rem;
 }
 
 .movies-grid {
-  margin: 16px;
+  margin: 0 32px;
   background: #FFFFFF;
   box-shadow: 1px 1px 8px -1px rgba(0, 0, 0, 0.4);
   font-size: 12px;
   border-collapse: collapse;
-  display: block;
   position: absolute;
-  width: calc(100% - 32px);
+  min-width: calc(100% - 64px);
   overflow: auto;
 }
 
@@ -50,17 +118,15 @@ body {
 
 .movies-grid__movie-col {
   padding: 16px;
+  vertical-align: top;
 }
-
 
 .header__title, .movie__title {
   min-width: 120px;
 }
 
-.header__dir, .movie__dir {
-  min-width: 120px;
-}
-
-.header__actors, .movie__actors {
-  min-width: 120px;
+.movie__title {
+  font-size: 1.4em;
+  color: var(--accent-color);
+  margin: 0;
 }
