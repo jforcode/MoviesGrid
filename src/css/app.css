@@ -111,6 +111,10 @@ a {
   text-align: left;
 }
 
+.header__plot-words {
+  max-width: 120px;
+}
+
 .movies-grid__movie {
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #616161;
@@ -133,4 +137,15 @@ a {
   font-size: 1.4em;
   color: var(--accent-color);
   margin: 0;
+}
+
+.movie__genres-holder {
+}
+
+.movie__genre {
+  margin-top: 0;
+}
+
+.movie__plot-words {
+  max-width: 120px;
 }

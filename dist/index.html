@@ -39,53 +39,46 @@
           <th class="movies-grid__header-col header__label">
             <div class="jb-flex-row jb-flex-row--centered">
               <span>Movie</span>
-              <div class="jb-flex-spacer"></div>
               <i class="material-icons">keyboard_arrow_down</i>
             </div>
           </th>
           <th class="movies-grid__header-col header__genres">
             <div class="jb-flex-row jb-flex-row--centered">
               <span>Genre</span>
-              <div class="jb-flex-spacer"></div>
               <i class="material-icons">keyboard_arrow_down</i>
             </div>
           </th>
           <th class="movies-grid__header-col header__lang">
             <div class="jb-flex-row jb-flex-row--centered">
               <span>Language</span>
-              <div class="jb-flex-spacer"></div>
               <i class="material-icons">keyboard_arrow_down</i>
             </div>
           </th>
           <th class="movies-grid__header-col header__cntry">
             <div class="jb-flex-row jb-flex-row--centered">
               <span>Country</span>
-              <div class="jb-flex-spacer"></div>
               <i class="material-icons">keyboard_arrow_down</i>
             </div>
           </th>
           <th class="movies-grid__header-col header__rating">
             <div class="jb-flex-row jb-flex-row--centered">
               <span>Content Rating</span>
-              <div class="jb-flex-spacer"></div>
               <i class="material-icons">keyboard_arrow_down</i>
             </div>
           </th>
           <th class="movies-grid__header-col header__budget">
             <div class="jb-flex-row jb-flex-row--centered">
               <span>Budget</span>
-              <div class="jb-flex-spacer"></div>
               <i class="material-icons">keyboard_arrow_down</i>
             </div>
           </th>
           <th class="movies-grid__header-col header__year">
             <div class="jb-flex-row jb-flex-row--centered">
               <span>Title Year</span>
-              <div class="jb-flex-spacer"></div>
               <i class="material-icons">keyboard_arrow_down</i>
             </div>
           </th>
-          <th class="movies-grid__header-col header__plot">Plot Keywords</th>
+          <th class="movies-grid__header-col header__plot-words">Plot Keywords</th>
         </tr>
         <tr class="movies-grid__movie">
           <td class="movies-grid__movie-col movie__label">
@@ -97,13 +90,22 @@
               <p class="movie__actors">Actors: CCH Pounder, Joel David Moore</p>
             </div>
           </td>
-          <td class="movies-grid__movie-col movie__genres">Action|Adventure|Fantasy|Sci-Fi</td>
+          <td class="movies-grid__movie-col movie__genres">
+            <div class="movie__genres-holder">
+              <p class="movie__genre">Action</p>
+              <p class="movie__genre">Adventure</p>
+              <p class="movie__genre">Fantasy</p>
+              <p class="movie__genre">Sci-Fi</p>
+            </div>
+          </td>
           <td class="movies-grid__movie-col movie__lang">English</td>
           <td class="movies-grid__movie-col movie__cntry">USA</td>
           <td class="movies-grid__movie-col movie__rating">PG-13</td>
           <td class="movies-grid__movie-col movie__budget">23700000</td>
           <td class="movies-grid__movie-col movie__year">2009</td>
-          <td class="movies-grid__movie-col movie__plot">avatar|future|marine|native|paraplegic</td>
+          <td class="movies-grid__movie-col movie__plot-words">
+            <span>avatar, future, marine, native, paraplegic</span>
+          </td>
         </tr>
       </table>
     </div>
