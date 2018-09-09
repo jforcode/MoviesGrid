@@ -111,10 +111,6 @@ a {
   text-align: left;
 }
 
-.header__plot-words {
-  max-width: 120px;
-}
-
 .movies-grid__movie {
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #616161;
@@ -139,13 +135,32 @@ a {
   margin: 0;
 }
 
+.movie__main-label {
+  font-weight: 500;
+}
+
 .movie__genres-holder {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .movie__genre {
   margin-top: 0;
+  min-width: 30%;
+  background: #8BC34A;
+  color: #FFFFFF;
+  margin: 2px;
+  padding: 4px 16px 4px 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
-.movie__plot-words {
+.header__genres, .movie__genres {
+  max-width: 200px;
+}
+
+.header__plot-words, .movie__plot-words {
   max-width: 120px;
 }
