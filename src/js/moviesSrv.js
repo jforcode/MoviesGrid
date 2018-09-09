@@ -7,6 +7,6 @@ export default {
 
   fetchMovies: function ({ pageNum, pageSize }) {
     let start = (pageNum - 1) * pageSize
-    return this.movies.slice(pageNum, pageNum + pageSize)
+    return this.movies.slice(start, start + pageSize)
   }
 }

@@ -12,6 +12,7 @@ export default {
       .querySelectorAll('.movies-grid__movie')
       .forEach(movieRow => movieRow.remove())
 
+    let movieHtml = ''
     movies.forEach(movie => {
       let movieMainHtml = templates.movieMain.replace('{{ movie_url }}', movie.movie_imdb_link)
         .replace('{{ movie_title }}', movie.movie_title)
@@ -23,7 +24,7 @@ export default {
 
       let moviePlotWords = movie.plot_keywords.split('|').join(', ')
 
-      let movieHtml = templates.movie.replace('{{ movie_main_details }}', movieMainHtml)
+      movieHtml += templates.movie.replace('{{ movie_main_details }}', movieMainHtml)
         .replace('{{ movie_genres }}', movieGenresHtml)
         .replace('{{ movie_language }}', movie.language)
         .replace('{{ movie_country }}', movie.country)
@@ -31,8 +32,8 @@ export default {
         .replace('{{ movie_budget }}', movie.budget)
         .replace('{{ movie_title_year }}', movie.title_year)
         .replace('{{ movie_plot_words }}', moviePlotWords)
-
-      this.moviesGrid.innerHTML += movieHtml
     })
+
+    this.moviesGrid.querySelector('tbody').innerHTML += movieHtml
   }
 }

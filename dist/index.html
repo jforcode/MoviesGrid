@@ -15,20 +15,20 @@
     </div>
     <div class="content">
       <div class="status-bar">
-        <p class="movies-label">Showing 20 results</p>
+        <p id="appStatus" class="movies-label"></p>
         <div class="jb-flex-spacer"></div>
-        <div class="pagination-holder">
-          <button class="page-control" @click="loadPage(1)">
+        <div id="pageHolder" class="pagination-holder">
+          <button id="pageFirst" class="page-control" onclick="app.loadFirstPage()">
             <i class="material-icons">first_page</i>
           </button>
-          <button class="page-control" @click="loadPage(appState.currPageNum - 1)">
+          <button id="pagePrev" class="page-control" onclick="app.loadPrevPage()">
             <i class="material-icons">chevron_left</i>
           </button>
-          <span class="page-status">Page 1 of 20</span>
-          <button class="page-control" @click="loadPage(appState.currPageNum + 1)">
+          <span id="pageStatus" class="page-status"></span>
+          <button id="pageNext" class="page-control" onclick="app.loadNextPage()">
             <i class="material-icons">chevron_right</i>
           </button>
-          <button class="page-control" @click="loadPage(appState.lastPageNum)">
+          <button id="pageLast" class="page-control" onclick="app.loadLastPage()">
             <i class="material-icons">last_page</i>
           </button>
         </div>
